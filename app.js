@@ -6,7 +6,7 @@ let generateButton = document.querySelector("button");
 imageBox.style.display = "none";
 
 function QrGenerate() {
-  let qrValue = qrText.value;
+  let qrValue = qrText.value.trim();
   if (qrValue === "") {
     alert("Please enter a URL or text to generate QR code");
     return;
@@ -17,7 +17,7 @@ function QrGenerate() {
     qrText.value = "";
 }
 
-generateButton.addEventListener("keypress", function(event) {
+qrText.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     QrGenerate();
   }
