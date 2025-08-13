@@ -1,33 +1,36 @@
-body{
-    background-color: #160606;
-    background-image: url("bg\ img.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+  margin: 0;
+    padding: 0;
+    background-color: #2d2d47;
 }
-.Main{
+
+/* Main container */
+.Main {
     color: #fff;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
     background-color: #9b7272;
-    border:solid rgb(247, 7, 7);
+    border: solid rgb(247, 7, 7);
     padding: 25px 35px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     width: 30%;
-    margin: 0 auto;
     margin: 50px auto;
 }
-#enter{
+
+/* Label text */
+#enter {
     margin-left: 35px;
     color: #fff;
-    font-family: 'Times New Roman', Times, serif ;   
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-#qr-text{
-    align-items: center;    
+
+/* Input field */
+#qr-text {
+    align-items: center;
     padding: 10px;
     width: 80%;
     margin-top: 10px;
@@ -39,7 +42,9 @@ body{
     font-size: 15px;
     outline: none;
 }
-button{
+
+/* Button */
+button {
     padding: 10px;
     width: 80%;
     margin-top: 30px;
@@ -54,18 +59,19 @@ button{
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-button:hover{
+button:hover {
     background-color: rgb(255, 0, 0);
     color: #fff;
 }
-#imgBox{
+
+/* QR Image Box */
+#imgBox {
     justify-content: center;
     align-items: center;
-    padding:10px;
+    padding: 10px;
     border-radius: 10px;
     max-height: 300px;
     width: 80%;
-
     margin: 20px auto;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.1);
@@ -74,14 +80,52 @@ button:hover{
     transition: max-height 0.3s ease;
 }
 
-#imgBox.show-img{
+#imgBox.show-img {
     max-height: 300px;
     margin: 20px auto;
     border: 2px solid #d1d1d1;
 }
-#imgBox.hide-img{
+#imgBox.hide-img {
     max-height: 0;
     margin: 0 auto;
     border: none;
 }
 
+/* 📱 RESPONSIVENESS */
+@media (max-width: 1024px) {
+    .Main {
+        width: 50%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Main {
+        width: 70%;
+        font-size: 18px;
+    }
+    #qr-text,
+    button {
+        width: 90%;
+        margin-left: 0;
+    }
+    #enter {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .Main {
+        width: 90%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    #qr-text,
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
